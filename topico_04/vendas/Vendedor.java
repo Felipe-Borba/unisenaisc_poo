@@ -14,7 +14,7 @@ public class Vendedor {
      */
     public Vendedor(String nome, String sobrenome, double salarioBase) {
         this.nome = (nome != null && !nome.isBlank() ? nome : "Não informado");
-        this.sobrenome = (sobrenome != null && !nome.isBlank() ?
+        this.sobrenome = (sobrenome != null && !sobrenome.isBlank() ?
 			  sobrenome : "Não informado");
         this.salarioBase = (salarioBase > 0.0 ? salarioBase : 0.0);
     }
