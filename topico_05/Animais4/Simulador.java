@@ -5,10 +5,11 @@ public class Simulador {
     public static void main(String[] args) {
         System.out.println("Simulador de Animais\n");
 
-        Animal[] animais = new Animal[3];
+        Animal[] animais = new Animal[4];
         animais[0] = new FalcaoPeregrino();
         animais[1] = new Guepardo();
         animais[2] = new PeixeAgulhao();
+        animais[3] = new Iguana();
 
 	// continua no próximo slide
         for (int t = INTERVALO; t <= DURACAO; t += INTERVALO) {

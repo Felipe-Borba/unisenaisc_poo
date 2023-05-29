@@ -26,7 +26,8 @@ public class GridBagLayoutFrame extends PrincipalFrame {
 		addComponent(botao, 0, 0, 1, 1);
 
 		botao = new JButton("Botão 2");
-		addComponent(botao, 0, 1, 1, 1);
+		constraints.fill = GridBagConstraints.BOTH;
+		addComponent(botao, 0, 2, 1, 4);
 
 		botao = new JButton("Botão 3");
 		constraints.weightx = 10;

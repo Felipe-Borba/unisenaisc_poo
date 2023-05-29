@@ -13,7 +13,7 @@ public class FlowLayoutFrame extends PrincipalFrame {
 	}
 
 	private void initialize() {
-		final int NUM_BOTOES = 5;
+		final int NUM_BOTOES = 10;
 		
 		for (int i = 1; i <= NUM_BOTOES; i++) {
 			add(new JButton("Botão " + i));
