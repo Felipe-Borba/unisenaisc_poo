@@ -41,10 +41,10 @@ public class GUIDemo {
 //		frame = new InputFieldsFrame();
 
         // Action Event
-		frame = new ActionEventFrame();
+//		frame = new ActionEventFrame();
 
         // Item Event
-//		frame = new ItemEventFrame();
+		frame = new ItemEventFrame();
 
         // List Selection Event
 //		frame = new ListSelectionEventFrame();
