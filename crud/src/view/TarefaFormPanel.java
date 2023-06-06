@@ -108,13 +108,19 @@ public class TarefaFormPanel extends JPanel {
 		salvarBtn.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				Tarefa tarefa = new Tarefa();
-				tarefa.setNome(nomeTxt.getText());
-				tarefa.setDescricao(descricaoTxt.getText());
+				if (tarefa == null) {
+					tarefa = new Tarefa();
+					tarefa.setNome(nomeTxt.getText());
+					tarefa.setDescricao(descricaoTxt.getText());
+					TarefaStorage.inserir(tarefa);
+				} else {
+					tarefa.setId(Integer.parseInt(idTxt.getText()));
+					tarefa.setNome(nomeTxt.getText());
+					tarefa.setDescricao(descricaoTxt.getText());
+					TarefaStorage.atualizar(tarefa);
+				}
 
-				TarefaStorage.inserir(tarefa);
-
-				JOptionPane.showMessageDialog(TarefaFormPanel.this, "Tarefa criada com sucesso!", AppFrame.titulo,
+				JOptionPane.showMessageDialog(TarefaFormPanel.this, "Tarefa salva com sucesso!", AppFrame.titulo,
 						JOptionPane.INFORMATION_MESSAGE);
 
 				frame.mostrarListaTarefas();
